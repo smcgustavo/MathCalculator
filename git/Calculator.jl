@@ -21,8 +21,32 @@ end
 function area_quadrado(lado::Float64)
     return lado^2
 end
+function area_retangulo(lado::Float64, altura::Float64)
+    return lado * altura
+end
 function area_circulo(raio::Float64)
     return (raio^2) * 3.141592653589
+end
+function perimetro_circulo(raio::Float64)
+    return raio * 2 * 3.141592653589
+end
+function volume_cubo(lado::Float64)
+    return lado^3
+end
+function volume_piramide(altura::Float64, comprimento::Float64, largura::Float64)
+    return altura * comprimento * largura / 3
+end
+function volume_esfera(raio::Float64)
+    return raio^3 * 3.141592653589 * 3 / 4
+end
+function volume_cilindro(raio::Float64, altura::Float64)
+    return area_circulo(raio) * altura
+end
+function volume_cone(raio::Float64, altura::Float64)
+    return volume_cilindro(raio,altura) / 3
+end
+function volume_prisma(a::Float64, b::Float64, comprimento::Float64)
+    return area_triangulo(a,b) * comprimento
 end
 
 end # module
