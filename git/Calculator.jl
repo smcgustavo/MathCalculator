@@ -18,6 +18,11 @@ end
 function area_triangulo(base::Float64, altura::Float64)
     return base * altura / 2
 end
-print(pitagoras(8.0,0.0,5.0), "\n")
-print(area_triangulo_eq(5.0))
+function area_quadrado(lado::Float64)
+    return lado^2
+end
+function area_circulo(raio::Float64)
+    return (raio^2) * 3.141592653589
+end
+
 end # module
